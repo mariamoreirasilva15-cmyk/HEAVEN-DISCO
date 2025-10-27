@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Disco Heaven</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-geral">
+        <div class="layout">
+            <aside class="menu_lateral">
+                <a href="index.html">
+                    <img class="logo" src="img/logodh.png" alt="logo">
+                </a>
+                
+                <nav class="navegacao">
+                    <ul class="lista_menu">
+                        <li class="item_menu">
+                            <a href="index.html" class="link_menu">
+                                <span class="material-icons">home</span>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li class="item_menu">
+                            <a href="#" class="link_menu">
+                                <span class="material-icons">search</span>
+                                <span>Buscar</span>
+                            </a>
+                        </li>
+                        <li class="item_menu">
+                            <a href="perfil.html" class="link_menu ativo">
+                                <span class="material-icons">person</span>
+                                <span>Perfil</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <footer class="rodape_lateral">
+                     <ul class="lista_links_lateral">
+                        <li><a href="#" class="link_ajuda">Termos de Serviço</a></li>
+                        <li><a href="#" class="link_ajuda">Política de Privacidade</a></li>
+                    </ul>
+                </footer>
+
+            </aside> 
+            
+            <main id="main-content" class="conteudo_principal">
+                 <header id="main-header" class="cabecalho_principal">
+                    <div class="botoes_navegacao_header">
+                        <button class="botao_nav"><span class="material-icons">chevron_left</span></button>
+                        <button class="botao_nav"><span class="material-icons">chevron_right</span></button>
+                    </div>
+                    <div class="campo_busca">
+                        <span class="material-icons">search</span>
+                        <input type="text" placeholder="O que você quer ouvir?">
+                    </div>
+                    <a href="index.html" class="link_perfil_header">
+                        <span class="material-icons">home</span>
+                    </a>
+                </header>
+
+                <div class="area_perfil">
+                    <div class="cabecalho_perfil">
+                        <img src="img/dominique.jpg" alt="Avatar do Usuário" class="avatar_perfil">
+                        <div class="info_perfil">
+                            <h4>Perfil</h4>
+                            <h1>Dominique</h1>
+                            <p>3 Playlists Públicas • 4 Seguidores • 12 Seguindo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conteudo">
+                    <section class="secao_de_conteudo">
+                        <h2 class="titulo_secao subtitulo">Playlists Públicas</h2>
+                        <div class="grid_albuns">
+                            <div class="card_musica" data-title="Anemoia" data-artist="Playlist" data-cover="img/anemioa.jpg">
+                                <img src="img/anemioa.jpg" alt="Anemoia" class="capa_album">
+                                <h3 class="titulo_album"> Anemoia</h3>
+                                <p class="artista_album"> Playlist de Dominique</p>
+                                <button class="botao_play">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                            <div class="card_musica" data-title="Mpbixa" data-artist="Playlist" data-cover="img/mpbixa.jpg">
+                                <img src="img/mpbixa.jpg" alt="Mpbixa" class="capa_album">
+                                <h3 class="titulo_album">Mpbixa</h3>
+                                <p class="artista_album">Playlist de Dominique</p>
+                                <button class="botao_play">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                            <div class="card_musica" data-title="brasil song" data-artist="Playlist" data-cover="img/brasilsong.jpeg">
+                                <img src="img/brasilsong.jpeg" alt="brasil song" class="capa_album">
+                                <h3 class="titulo_album">Brasil Song</h3>
+                                <p class="artista_album">Playlist de Dominique</p>
+                                <button class="botao_play">
+                                    <span class="material-icons">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <footer class="player">
+            <div class="player_conteudo">
+                <div class="tocando_agora">
+                    <img id="player-cover" src="img/logodh.png" alt="logo" class="logo-player">
+                    <div>
+                        <h3 id="player-title" class="titulo_musica_tocando">Bem-vindo</h3>
+                        <p id="player-artist" class="artista_musica_tocando">Selecione uma música</p>
+                    </div>
+                </div>
+                
+                <div class="player_controles">
+                    <div class="botoes_controle">
+                        <button class="botao_player desktop-only"><span class="material-icons">shuffle</span></button>
+                        <button class="botao_player desktop-only"><span class="material-icons">skip_previous</span></button>
+                        <button id="play-pause-btn" class="botao_player botao_principal_play">
+                            <span id="play-pause-icon" class="material-icons">play_arrow</span>
+                        </button>
+                        <button class="botao_player desktop-only"><span class="material-icons">skip_next</span></button>
+                        <button class="botao_player desktop-only"><span class="material-icons">repeat</span></button>
+                    </div>
+                </div>
+                
+                <div class="player_acoes desktop-only">
+                    <span class="material-icons">volume_up</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <nav class="navegacao_mobile">
+        <a href="index.html" class="link_mobile">
+            <span class="material-icons">home</span>
+            Início
+        </a>
+        <a href="#" class="link_mobile">
+            <span class="material-icons">search</span>
+            Buscar
+        </a>
+        <a href="perfil.html" class="link_mobile ativo">
+            <span class="material-icons">person</span>
+            Perfil
+        </a>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+body {
+    background-color: #000;
+    color: #e4e4e7;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #535353; 
+    border: 3px solid #121212; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3; 
+}
+.container-geral {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.menu_lateral {
+    width: 15rem;
+    background-color: #000;
+    flex-shrink: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+.logo {
+    height: 7vh;
+    width: 7vh;
+}
+
+.lista_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.link_menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    font-size: 1.125rem; 
+    font-weight: 700;
+    color: #a1a1aa; 
+    transition: color 0.3s ease;
+}
+
+.link_menu.ativo, .link_menu:hover {
+    color: #fff;
+}
+
+.link_menu .material-icons {
+    font-size: 1.875rem; 
+}
+.titulo_bloco_lateral {
+    color: #a1a1aa;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; 
+    font-weight: 700;
+    font-size: 0.875rem; 
+    margin-bottom: 1rem; 
+}
+
+.lista_links_lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    color: #a1a1aa;
+}
+
+.link_ajuda {
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.link_ajuda:hover {
+    color: #fff;
+}
+
+.rodape_lateral {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #27272a;
+}
+
+.conteudo_principal {
+    flex: 1;
+    background-image: linear-gradient(to bottom, #8b0000, #18181b, #000); 
+    overflow-y: auto;
+}
+
+.cabecalho_principal {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+}
+
+.cabecalho-com-scroll {
+    background-color: rgba(18, 18, 18, 0.85);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.botoes_navegacao_header {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.botao_nav, .link_perfil_header {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    color: #e4e4e7;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.botao_nav:hover, .link_perfil_header:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.botao_nav .material-icons {
+    font-size: 24px;
+}
+
+.campo_busca {
+    flex: 0 1 360px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #27272a;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #a1a1aa;
+}
+
+.campo_busca input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #e4e4e7;
+    font-size: 0.875rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.campo_busca input::placeholder {
+    color: #a1a1aa;
+    font-weight: 400;
+}
+
+.conteudo {
+    padding: 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.titulo_secao {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+.titulo_secao.subtitulo {
+    font-size: 1.5rem; 
+}
+
+.grid_historico {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem; 
+}
+
+.grid_albuns {
+    display: grid;
+    font-weight: 700; 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.card_historico {
+    display: flex;
+    align-items: center;
+    background-color: rgba(39, 39, 42, 0.5); 
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card_historico:hover {
+    background-color: rgba(39, 39, 42, 0.8);
+}
+
+.imagem_historico {
+    width: 5rem;
+    height: 5rem;
+}
+
+.titulo_historico {
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.card_musica {
+    position: relative;
+    padding: 1rem;
+    background-color: #181818;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card_musica:hover {
+    background-color: #282828;
+}
+
+.capa_album {
+    width: 100%;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.titulo_album {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artista_album {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.botao_play {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: #8b0000; 
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.card_musica:hover .botao_play {
+    opacity: 1;
+    transform: translateY(-0.5rem);
+}
+
+.botao_play .material-icons {
+    font-size: 2.25rem;
+}
+
+.player {
+    background-color: #181818;
+    border-top: 1px solid #27272a;
+    height: 6rem; 
+    flex-shrink: 0;
+}
+
+.player_conteudo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.tocando_agora {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 25%;
+}
+
+.logo-player {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.375rem;
+}
+
+.titulo_musica_tocando {
+    font-weight: 700;
+}
+
+.artista_musica_tocando {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+}
+
+.player_controles {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes_controle {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.botao_player {
+    background: none;
+    border: none;
+    color: #a1a1aa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.botao_player:hover {
+    color: #fff;
+}
+
+.botao_player .material-icons {
+    font-size: 1.875rem;
+    vertical-align: middle;
+}
+
+.botao_principal_play {
+    background-color: #ffffff;
+    color: #000;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.botao_principal_play:hover {
+    transform: scale(1.05);
+    color: #000;
+}
+
+.botao_principal_play .material-icons {
+    font-size: 1.875rem;
+}
+
+.player_acoes {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    color: #a1a1aa;
+}
+
+.area_perfil {
+    padding: 2rem 1.5rem;
+}
+
+.cabecalho_perfil {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.avatar_perfil {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    border-radius: 50%; 
+}
+
+.info_perfil h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+
+.navegacao_mobile {
+    display: none;
+}
+
+/* responsivo */
+
+@media (min-width: 1024px) {
+    .grid_historico {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .grid_albuns {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu_lateral {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo_principal {
+        padding-bottom: 120px;
+    }
+    .cabecalho_principal {
+        justify-content: flex-end;
+    }
+    .campo_busca,
+    .botoes_navegacao_header,
+    .link_perfil_header {
+        display: none;
+    }
+    .player {
+        position: fixed;
+        bottom: 60px;
+        width: 100%;
+        z-index: 20;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .tocando_agora {
+        width: 80%;
+    }
+    .player_controles {
+        width: 20%;
+        justify-content: flex-end;
+    }
+    .navegacao_mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #181818;
+        border-top: 1px solid #27272a;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 20;
+    }
+    .link_mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #a1a1aa;
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+    .link_mobile.ativo {
+        color: #fff;
+    }
+    .conteudo {
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .grid_historico {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .grid_albuns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+    .titulo_secao {
+        font-size: 1.5rem;
+    }
+    .titulo_secao.subtitulo {
+        font-size: 1.25rem;
+    }
+    .area_perfil {
+        padding: 1rem;
+    }
+    .cabecalho_perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .avatar_perfil {
+        width: 10rem;
+        height: 10rem;
+    }
+    .info_perfil h1 {
+        font-size: 2.5rem;
+    }
+}
